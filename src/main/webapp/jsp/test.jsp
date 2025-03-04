@@ -9,5 +9,6 @@
 <body>
 TEST
 bwb_test_1
+test_2
 </body>
 </html>
