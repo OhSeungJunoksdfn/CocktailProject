@@ -8,5 +8,6 @@
 </head>
 <body>
 TEST
+bwb_test
 </body>
 </html>
