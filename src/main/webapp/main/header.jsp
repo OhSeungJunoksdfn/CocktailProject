@@ -23,7 +23,7 @@
                 <a class="dropdown-item" href="index.html">레시피 목록</a>
                 <a class="dropdown-item" href="archive.html">레시피 검색</a>
              <c:if test=" ${sessionScope.id !=null }">
-                <a class="dropdown-item" href="single.html">레시피 작성하기</a>
+                <a class="dropdown-item" href="single.html">나만의 레시피</a>
              </c:if>
              </div>
             </li>

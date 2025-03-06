@@ -19,4 +19,6 @@ LIKES	NUMBER
 public class CocktailVO {
 	private int cocktail_no,hit,likes;
 	private String id,name,ename,comments,alc,image,dontent,detail;
+	private CocktailIngredientsVO civo = new CocktailIngredientsVO();
+	private CocktailRecipeIngredientsVO crivo = new CocktailRecipeIngredientsVO();
 }

@@ -6,6 +6,7 @@
  <properties resource="db.properties" />
   <typeAliases >
   <typeAlias type="com.sist.vo.CocktailbarVO" alias="CocktailbarVO"/>
+  <typeAlias type="com.sist.vo.CocktailVO" alias="CocktailVO"/>
   </typeAliases>
   <environments default="development">
   	<environment id="development">
@@ -20,5 +21,6 @@
   </environments>
   <mappers>
   	<mapper resource="com/sist/mapper/cocktailbar-mapper.xml"/>
+  	<mapper resource="com/sist/mapper/cocktail-mapper.xml"/>
   </mappers>
  </configuration>
