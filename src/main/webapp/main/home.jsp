@@ -12,8 +12,8 @@
       <div class="container">
         <div class="row align-items-center justify-content-center text-center ftco-vh-100">
           <div class="col-md-12">
-            <h1 class="ftco-heading ftco-animate mb-3">낭만이 가득한 칵테일 바에 오신 걸 환영합니다!</h1>
-            <h2 class="h5 ftco-subheading mb-5 ftco-animate">A free template for Restaurant Websites Distributed by </h2>    
+            <h1 class="ftco-heading ftco-animate mb-3">낭만이 가득한 밤, 특별한 한 잔</h1>
+            <h2 class="h5 ftco-subheading mb-5 ftco-animate">아름다운 분위기와 함께하는 감미로운 칵테일.</h2>    
             <p><a href="https://free-template.co/" target="_blank" class="btn btn-outline-white btn-lg ftco-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
           </div>
         </div>
@@ -47,133 +47,30 @@
         
         <div class="row">
           <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h4 class="ftco-sub-title">Our Offers</h4>
-            <h2 class="display-4">Offers &amp; Promos</h2>
+            <h4 class="ftco-sub-title">칵테일바</h4>
+            <h2 class="display-4">낭만이 흐르는 공간</h2>
             <div class="row justify-content-center">
               <div class="col-md-7">
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <p class="lead">은은한 조명, 감미로운 음악, 그리고 한 잔의 여유.</p>
               </div>
             </div>
           </div>
           <div class="col-md-12">
             <div class="owl-carousel ftco-owl">
-
+            
+			<c:forEach var="vo" items="${cbList }">
               <div class="item">
                 <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
+                  <img src="${vo.image }" style="width:100%;height:250px" alt="Free Template by Free-Template.co" class="img-fluid">
                   <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef with Sauce</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <h5 class="mt-0 h4" style=" text-overflow:ellipsis;white-space:nowrap; overflow:hidden">${vo.name }</h5>
+                    <p class="mb-4" style="height:100px; text-overflow:ellipsis;white-space:wrap; overflow:hidden">${vo.profile }</p>
 
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
+                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">VIEW</a></p>
                   </div>
                 </div>
               </div>
-
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Fresh Salmon Fish</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef Ribs</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef with Sauce</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Fresh Salmon Fish</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef Ribs</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef with Sauce</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Fresh Salmon Fish</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="../images/offer_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="text-primary">$39.50</h5>
-                    <h5 class="mt-0 h4">Beef Ribs</h5>
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Order Now!</a></p>
-                  </div>
-                </div>
-              </div>
+			</c:forEach>
 
             </div>
           </div>
@@ -321,121 +218,6 @@
         </div>
       </div>
     </section>
-    <!-- END section -->
-
-    <section class="ftco-section bg-light" id="section-contact">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">Contact Us</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-7">
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md mb-5 ftco-animate">
-            <form action="" method="post">
-              <div class="form-group">
-                <label for="name" class="sr-only">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Enter your name">
-              </div>
-              <div class="form-group">
-                <label for="email" class="sr-only">Email</label>
-                <input type="text" class="form-control" id="email" placeholder="Enter your email">
-              </div>
-              <div class="form-group">
-                <label for="message" class="sr-only">Message</label>
-                <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Write your message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-primary btn-lg" value="Send Message">
-              </div>
-            </form>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <div id="map"></div>
-    <!-- END section -->
-       <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-          <div class="modal-body">
-            <div class="row">
-              <div class="col-lg-4 bg-image" style="background-image: url(../images/bg_3.jpg);width:100px!important;height:667px!important;"></div>
-              <div class="col-lg-8 p-5">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <small>CLOSE </small><span aria-hidden="true">&times;</span>
-                </button>
-                <h1 class="mb-4">Reserve A Bar</h1>  
-                <form action="#" method="post">
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_fname">First Name</label>
-                      <input type="text" class="form-control" id="m_fname">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_lname">Last Name</label>
-                      <input type="text" class="form-control" id="m_lname">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="m_email">Email</label>
-                      <input type="email" class="form-control" id="m_email">
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_people">How Many People</label>
-                      <select name="" id="m_people" class="form-control">
-                        <option value="1">1 People</option>
-                        <option value="2">2 People</option>
-                        <option value="3">3 People</option>
-                        <option value="4+">4+ People</option>
-                      </select>
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_phone">Phone</label>
-                      <input type="text" class="form-control" id="m_phone">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-6 form-group">
-                      <label for="m_date">Date</label>
-                      <input type="text" class="form-control" id="m_date">
-                    </div>
-                    <div class="col-md-6 form-group">
-                      <label for="m_time">Time</label>
-                      <input type="text" class="form-control" id="m_time">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <label for="m_message">Message</label>
-                      <textarea class="form-control" id="m_message" cols="30" rows="7"></textarea>
-                    </div>
-                  </div>
-                  
-                  <div class="row">
-                    <div class="col-md-12 form-group">
-                      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Reserve Now">
-                    </div>
-                  </div>
-
-                </form>
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
+ 	
 </body>
 </html>

@@ -24,9 +24,12 @@ public class MainModel {
 		CocktailVO cvo = CocktailDAO.cocktailData();
 		int cno=cvo.getCocktail_no();
 		List<CocktailVO> crList = CocktailDAO.cocktailRecipeData(cno);
+		List<CocktailbarVO> cbList=CocktailbarDAO.cocktailbarHouseData12();
 		request.setAttribute("crList", crList);
+		request.setAttribute("cbList", cbList);
 		request.setAttribute("cbvo", cbvo);
 		request.setAttribute("cvo", cvo);
 		return "../main/main.jsp";
 	}
+	
 }

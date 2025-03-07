@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 html {
   overflow-x: hidden; }
 
@@ -21,7 +22,7 @@ h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   line-height: 1.45;
   color: #000;
-  font-family: "Playfair Display", serif;
+  font-family: "Noto Sans KR", serif;
   font-weight: bold; }
 
 .text-primary {
