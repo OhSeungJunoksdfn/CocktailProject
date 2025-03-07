@@ -29,6 +29,8 @@ public class MainModel {
 		request.setAttribute("cbList", cbList);
 		request.setAttribute("cbvo", cbvo);
 		request.setAttribute("cvo", cvo);
+		request.setAttribute("main_jsp", "../main/home.jsp");
+		
 		return "../main/main.jsp";
 	}
 	
