@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" style="background-color:#1f1d5c !important;" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">Taste</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">커뮤니티</a>
               <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-              	<a class="dropdown-item" href="index.html">자유게시판</a>
+              	<a class="dropdown-item" href="../community/freeboard_list.do">자유게시판</a>
               	<a class="dropdown-item" href="archive.html">묻고답하기</a>
               	<a class="dropdown-item" href="single.html">공지사항</a>
               	<a class="dropdown-item" href="single.html">실시간 채팅</a>
