@@ -49,10 +49,10 @@
                             </li>
                             <li><a href="#">상품</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">주류 목록</a></li>
-                                    <li><a href="./shoping-cart.html">도구 관리</a></li>
-                                    <li><a href="./shoping-cart.html">주류 검색</a></li>
-                                    <li><a href="./shoping-cart.html">도구 검색</a></li>
+                                    <li><a href="./shop-details.html">주류 상품 목록</a></li>
+                                    <li><a href="./shoping-cart.html">용품 목록</a></li>
+                                    <li><a href="./shoping-cart.html">주류 상품 검색</a></li>
+                                    <li><a href="./shoping-cart.html">용품 검색</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">커뮤니티</a>
@@ -142,10 +142,10 @@
                             </li>
                             <li><a href="#">상품</a>
                                 <ul class="header__menu__dropdown">
-                                    <li><a href="./shop-details.html">주류 목록</a></li>
-                                    <li><a href="./shoping-cart.html">도구 관리</a></li>
-                                    <li><a href="./shoping-cart.html">주류 검색</a></li>
-                                    <li><a href="./shoping-cart.html">도구 검색</a></li>
+                                    <li><a href="./shop-details.html">주류 상품 목록</a></li>
+                                    <li><a href="./shoping-cart.html">용품 목록</a></li>
+                                    <li><a href="./shoping-cart.html">주류 상품 검색</a></li>
+                                    <li><a href="./shoping-cart.html">용품 검색</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">커뮤니티</a>
