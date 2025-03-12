@@ -22,20 +22,9 @@ public class CocktailbarDAO {
 	}
 	public static List<CocktailbarVO> cocktailbarHouseData12()
 	{
-		SqlSession session = null;
-		List<CocktailbarVO> list = null;
-		try {
-			session=ssf.openSession();
-			list=session.selectList("cocktailbarHouseData12");
-		} catch(Exception e)
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			if(session!=null) session.close();
-		}
+		SqlSession session = ssf.openSession();
+		List<CocktailbarVO> list= session.selectList("cocktailbarHouseData12");
+		session.close();
 		return list;
 	}
-	
 }

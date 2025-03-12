@@ -8,77 +8,183 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Taste</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span> Menu
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-             <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">레시피</a>
-             <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                <a class="dropdown-item" href="index.html">레시피 목록</a>
-                <a class="dropdown-item" href="archive.html">레시피 검색</a>
-             <c:if test=" ${sessionScope.id !=null }">
-                <a class="dropdown-item" href="single.html">나만의 레시피</a>
-             </c:if>
-             </div>
-            </li>
-             <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">칵테일바</a>
-             <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                <a class="dropdown-item" href="index.html">칵테일바 목록</a>
-                <a class="dropdown-item" href="archive.html">칵테일바 검색</a>
-             <c:if test=" ${sessionScope.id !=null }">
-                <a class="dropdown-item" href="single.html">칵테일바 예약</a>
-             </c:if>
-             </div>
-            </li>
-             <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">상품</a>
-             <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                <a class="dropdown-item" href="index.html">상품 목록</a>
-                <a class="dropdown-item" href="archive.html">상품 검색</a>
-             </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">커뮤니티</a>
-              <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-              	<a class="dropdown-item" href="index.html">자유게시판</a>
-              	<a class="dropdown-item" href="archive.html">묻고답하기</a>
-              	<a class="dropdown-item" href="single.html">공지사항</a>
-              	<a class="dropdown-item" href="single.html">실시간 채팅</a>
-              </div>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">뉴스</a>
-            </li>
-            <li class="nav-item">
-               <a class="nav-link" href="#">문의</a>
-            </li>
-            <li class="nav-item dropdown">
-            	<a class="nav-link dropdown-toggle" href="#" id="yummyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">회원</a>
-            	<c:if test="${sessionScope.id==null }">
-            		<div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                     	<a class="dropdown-item" href="index.html">회원가입</a>
-                        <a class="dropdown-item" href="archive.html">아이디 찾기</a>
-                        <a class="dropdown-item" href="single.html">비밀번호 찾기</a>
-                    </div>
-                </c:if>
-                <c:if test=" ${sessionScope.id !=null }">
-                    <div class="dropdown-menu" aria-labelledby="yummyDropdown">
-                        <a class="dropdown-item" href="index.html">회원수정</a>
-                        <a class="dropdown-item" href="archive.html">회원탈퇴</a>
-                    </div>
-                </c:if>
-            </li>
-          </ul>
+ <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="../main/main.do"><img src="../img/logo.png" alt=""></a>
         </div>
-      </div>
-    </nav>
-    <!-- END nav -->
+        <div class="humberger__menu__cart">
+            <ul>
+            <c:if test="${sessionScope.id!=null }">
+                <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+              </c:if>
+            </ul>
+        </div>
+        <div class="humberger__menu__widget">
+
+            <div class="header__top__right__auth">
+                <a href="#"><i class="fa fa-user"></i> 로그인</a>
+            </div>
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+                      <ul>
+                            <li><a href="#">칵테일</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="cocktail/cocktail_list.do">칵테일 목록</a></li>
+                                    <li><a href="./shoping-cart.html">재료 목록</a></li>
+                                    <li><a href="./shoping-cart.html">칵테일 검색</a></li>
+                                    <li><a href="./checkout.html">나만의 칵테일</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">칵테일바</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">칵테일바 목록</a></li>
+                                    <li><a href="./shoping-cart.html">칵테일바 관리</a></li>
+                                    <c:if test="${sessionScope.id!=null }">
+                                    <li><a href="./checkout.html">칵테일바 예약</a></li>
+                                    </c:if>
+                                </ul>
+                            </li>
+                            <li><a href="#">상품</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">주류 목록</a></li>
+                                    <li><a href="./shoping-cart.html">도구 관리</a></li>
+                                    <li><a href="./shoping-cart.html">주류 검색</a></li>
+                                    <li><a href="./shoping-cart.html">도구 검색</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">커뮤니티</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">자유게시판</a></li>
+                                    <li><a href="./shoping-cart.html">묻고 답하기</a></li>
+                                    <li><a href="./checkout.html">공지사항</a></li>
+                                    <c:if test="${sessionScope.id!=null }">
+                                    <li><a href="./checkout.html">실시간 채팅</a></li>
+                                    </c:if>
+                                </ul>
+                            </li>
+                            <c:if test="${sessionScope.id!=null }">
+                            <c:if test="${sessionScope.admin='n' }">
+                            <li><a href="./contact.html">마이페이지</a></li>
+                            </c:if>
+                            <c:if test="${sessionScope.admin='y' }">
+                            <li><a href="./contact.html">관리자페이지</a></li>
+                            </c:if>
+                            </c:if>
+                        </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+
+        <div class="humberger__menu__contact">
+            <ul>
+            <c:if test="${sessionScope.id!=null }">
+                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                <li>Free Shipping for all Order of $99</li>
+              </c:if>
+            </ul>
+        </div>
+    </div>
+    <!-- Humberger End -->
+
+    <!-- Header Section Begin -->
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__left">
+                            <ul>
+                            <c:if test="${sessionScope.id!=null }">
+                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li>Free Shipping for all Order of $99</li>
+                              </c:if>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+            
+                            <div class="header__top__right__auth">
+                                <a href="#"><i class="fa fa-user"></i> 로그인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="header__logo">
+                        <a href="../main/main.do"><img src="../img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <nav class="header__menu">
+                        <ul>
+                            <li><a href="#">칵테일</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="../cocktail/cocktail_list.do">칵테일 목록</a></li>
+                                    <li><a href="./shoping-cart.html">재료 목록</a></li>
+                                    <li><a href="./checkout.html">나만의 칵테일</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">칵테일바</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="#">칵테일바 목록</a></li>
+                                    <li><a href="#">칵테일바 관리</a></li>
+                                    <c:if test="${sessionScope.id!=null }">
+                                    <li><a href="#">칵테일바 예약</a></li>
+                                    </c:if>
+                                </ul>
+                            </li>
+                            <li><a href="#">상품</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="./shop-details.html">주류 목록</a></li>
+                                    <li><a href="./shoping-cart.html">도구 관리</a></li>
+                                    <li><a href="./shoping-cart.html">주류 검색</a></li>
+                                    <li><a href="./shoping-cart.html">도구 검색</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">커뮤니티</a>
+                                <ul class="header__menu__dropdown">
+                                    <li><a href="#">자유게시판</a></li>
+                                    <li><a href="#">묻고 답하기</a></li>
+                                    <li><a href="#">공지사항</a></li>
+                                    <c:if test="${sessionScope.id!=null }">
+                                    <li><a href="#">실시간 채팅</a></li>
+                                    </c:if>
+                                </ul>
+                            </li>
+                            <c:if test="${sessionScope.id!=null }">
+                            <c:if test="${sessionScope.admin=='n' }">
+                            <li><a href="#">마이페이지</a></li>
+                            </c:if>
+                            <c:if test="${sessionScope.admin=='y' }">
+                            <li><a href="#">관리자페이지</a></li>
+                            </c:if>
+                            </c:if>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-2">
+                    <div class="header__cart">
+                        <ul>
+                        	<c:if test="${sessionScope.id!=null }">
+                            <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+                          </c:if>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="humberger__open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Header Section End -->
 </body>
 </html>

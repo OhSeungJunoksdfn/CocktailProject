@@ -18,7 +18,8 @@ LIKES	NUMBER
 @Data
 public class CocktailVO {
 	private int cocktail_no,hit,likes;
-	private String id,name,ename,comments,alc,image,dontent,detail;
+	private String id,name,ename,comments,alc,image,content,detail;
 	private CocktailIngredientsVO civo = new CocktailIngredientsVO();
 	private CocktailRecipeIngredientsVO crivo = new CocktailRecipeIngredientsVO();
+	private CocktailTagVO ctvo = new CocktailTagVO();
 }

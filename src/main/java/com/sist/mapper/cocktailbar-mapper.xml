@@ -5,7 +5,7 @@
 		SELECT * FROM (SELECT * FROM cocktailbar ORDER BY DBMS_RANDOM.RANDOM)
 		WHERE rownum&lt;=1
 	</select>
-		<select id="cocktailbarHouseData12" resultType="CocktailbarVO">
+	<select id="cocktailbarHouseData12" resultType="CocktailbarVO">
 		SELECT * FROM (SELECT * FROM cocktailbar ORDER BY DBMS_RANDOM.RANDOM)
 		WHERE rownum&lt;=12
 	</select>

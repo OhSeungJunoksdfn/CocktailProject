@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,216 +8,233 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <section class="ftco-cover" style="background-image: url(${cbvo.image});" id="section-home">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center ftco-vh-100">
-          <div class="col-md-12">
-            <h1 class="ftco-heading ftco-animate mb-3">낭만이 가득한 밤, 특별한 한 잔</h1>
-            <h2 class="h5 ftco-subheading mb-5 ftco-animate">아름다운 분위기와 함께하는 감미로운 칵테일.</h2>    
-            <p><a href="https://free-template.co/" target="_blank" class="btn btn-outline-white btn-lg ftco-animate" data-toggle="modal" data-target="#reservationModal">Reservation</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-    
-    <section class="ftco-section" id="section-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-5 ftco-animate mb-5">
-            <h4 class="ftco-sub-title">Our Store</h4>
-            <h2 class="ftco-primary-title display-4">Welcome</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-            <p class="mb-4">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p><a href="#" class="btn btn-secondary btn-lg">Our Store</a></p>
-          </div>
-          <div class="col-md-1"></div>
-          <div class="col-md-6 ftco-animate img" data-animate-effect="fadeInRight">
-            <img src="../images/about_img_1.jpg" alt="Free Template by Free-Template.co">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-    
-
-    <section class="ftco-section bg-light" id="section-offer">
-      <div class="container">
-        
-        <div class="row">
-          <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h4 class="ftco-sub-title">칵테일바</h4>
-            <h2 class="display-4">낭만이 흐르는 공간</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-7">
-                <p class="lead">은은한 조명, 감미로운 음악, 그리고 한 잔의 여유.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
-            <div class="owl-carousel ftco-owl">
-            
-			<c:forEach var="vo" items="${cbList }">
-              <div class="item">
-                <div class="media d-block mb-4 text-center ftco-media ftco-animate border-0">
-                  <img src="${vo.image }" style="width:100%;height:250px" alt="Free Template by Free-Template.co" class="img-fluid">
-                  <div class="media-body p-md-5 p-4">
-                    <h5 class="mt-0 h4" style=" text-overflow:ellipsis;white-space:nowrap; overflow:hidden">${vo.name }</h5>
-                    <p class="mb-4" style="height:100px; text-overflow:ellipsis;white-space:wrap; overflow:hidden">${vo.profile }</p>
-
-                    <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">VIEW</a></p>
-                  </div>
-                </div>
-              </div>
-			</c:forEach>
-
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    <!-- END section -->
-
-    <section class="ftco-section" id="section-menu">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">${cvo.name }</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-7">
-                <p class="lead">${cvo.comments }</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-12 text-center">
-            <div class="tab-content text-left">
-              <div class="tab-pane fade show active" id="pills-breakfast" role="tabpanel" aria-labelledby="pills-breakfast-tab">
-                <div class="row">
-                  	<c:forEach var="vo" items="${crList }">
-                  <div class="col-md-6 ftco-animate">
-                    <div class="media menu-item">
-                      <img class="mr-3" src="${vo.civo.ciimage }" class="img-fluid" alt="Free Template by Free-Template.co">
-                      <div class="media-body">
-                        <h5 class="mt-0">${vo.civo.ingname }</h5>
-                        <p>${vo.civo.comments }</p>
-                        <h6 class="text-primary menu-price">${vo.crivo.volume }${vo.crivo.unit }</h6>
-                      </div>
+    <section class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="hero__categories">
+                        <div class="hero__categories__all">
+                            <i class="fa fa-bars"></i>
+                            <span>상품</span>
+                        </div>
+                        <ul>
+                            <li><a href="#">레드</a></li>
+                            <li><a href="#">화이트</a></li>
+                            <li><a href="#">스파클링</a></li>
+                            <li><a href="#">아메리칸 위스키</a></li>
+                            <li><a href="#">로제</a></li>
+                            <li><a href="#">스카치 위스키</a></li>
+                            <li><a href="#">리큐르</a></li>
+                            <li><a href="#">하이볼글라스</a></li>
+                            <li><a href="#">칵테일쉐이커</a></li>
+                            <li><a href="#">지거/믹싱턴</a></li>
+                            <li><a href="#">바스푼</a></li>
+                        </ul>
                     </div>
-                  </div>
-                  	</c:forEach>
                 </div>
-              </div>
- 
-            </div>
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+                                <div class="hero__search__categories">
+                                    All Categories
+                                    <span class="arrow_carrot-down"></span>
+                                </div>
+                                <input type="text" placeholder="Seach">
+                                <button type="submit" class="site-btn">검색</button>
+                            </form>
+                        </div>
 
-          </div>
+                    </div>
+                    <div class="hero__item set-bg" data-setbg="${cbvo.image }" style="padding:0">
+                        <div class="hero__text" style="background-color:rgba(0,0,0,0.2);width:100%;height:100%;padding:100px 0 0 75px ">
+                            <span>낭만이 흐르는 공간</span>
+                            <h2 style="color:#fff">${cbvo.name }</h2>
+                            <p>당신의 하루를 더욱 특별하게, ${cbvo.name }에서 만나요.</p>
+                            <a href="#" class="primary-btn">예약하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </section>
-    <!-- END section -->
+    <!-- Hero Section End -->
 
-    <section class="ftco-section bg-light" id="section-news">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">News &amp; Events</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-7">
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
+    <!-- Categories Section Begin -->
+    <section class="categories">
+        <div class="container">
+            <div class="row">
+                <div class="categories__slider owl-carousel">
+                <c:forEach var="vo" items="${chlist }">
+                    <div class="col-lg-3">
+                        <div class="categories__item set-bg" data-setbg="${vo.image }">
+                            <h5><a href="#">${vo.name }</a></h5>
+                        </div>
+                    </div>
+                </c:forEach>
+                    
+                </div>
             </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="media d-block mb-4 text-center ftco-media ftco-animate">
-              <img src="../images/offer_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-              <div class="media-body p-md-5 p-4">
-                <h5 class="mt-0 h4">In Taste Restaurant</h5>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="media d-block mb-4 text-center ftco-media ftco-animate">
-              <img src="../images/offer_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-              <div class="media-body p-md-5 p-4">
-                <h5 class="mt-0 h4">Chef Special Menu</h5>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Read More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="media d-block mb-4 text-center ftco-media ftco-animate">
-              <img src="../images/offer_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-              <div class="media-body p-md-5 p-4">
-                <h5 class="mt-0 h4">Merriage Celebrations</h5>
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-
-                <p class="mb-0"><a href="#" class="btn btn-primary btn-sm">Read More</a></p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-    <!-- END section -->
+    <!-- Categories Section End -->
 
-    <section class="ftco-section" id="section-gallery">
-      <div class="container">
-        <div class="row ftco-custom-gutters">
-
-          <div class="col-md-12 text-center mb-5 ftco-animate">
-            <h2 class="display-4">Food Gallery</h2>
-            <div class="row justify-content-center">
-              <div class="col-md-7">
-                <p class="lead">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              </div>
+    <!-- Featured Section Begin -->
+    <section class="featured spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <h2>Featured Product</h2>
+                    </div>
+                    <div class="featured__controls">
+                        <ul>
+                            <li class="active" data-filter="*">All</li>
+                            <li data-filter=".레드">레드</li>
+                            <li data-filter=".화이트">화이트</li>
+                            <li data-filter=".스파클링">스파클링</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_1.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_2.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_3.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_2.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_2.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_3.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_3.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-          <div class="col-md-4 ftco-animate">
-            <a href="../images/menu_1.jpg" class="ftco-thumbnail image-popup">
-              <img src="../images/menu_1.jpg" alt="Free Template by Free-Template.co" class="img-fluid">
-            </a>
-          </div>
-
+            <div class="row featured__filter">
+            <c:forEach var="vo" items="${plist }">
+                <div class="col-lg-3 col-md-4 col-sm-6 mix oranges ${vo.type }">
+                    <div class="featured__item">
+                        <div class="featured__item__pic set-bg" data-setbg=${vo.poster }>
+                            <ul class="featured__item__pic__hover">
+                                <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="featured__item__text">
+                            <h6><a href="#">${vo.name }</a></h6>
+                            <h5>${vo.price }</h5>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+            </div>
         </div>
-      </div>
     </section>
- 	
+    <!-- Featured Section End -->
+
+
+    <!-- Latest Product Section Begin -->
+    <section class="latest-product spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>칵테일</h4>
+                        <div class="latest-product__slider owl-carousel">
+                        <c:forEach  var="vo" items="${list }" varStatus="i">
+                        <c:if test="${i.count == 1 or i.count == 4 or i.count == 7 or i.count == 10}">
+                            <div class="latest-prdouct__slider__item">
+                            </c:if>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="${vo.image }" alt="" style="width:110px; height:110px">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>${vo.ename }</h6>
+                                        <span>${vo.name }</span>
+                                    </div>
+                                </a>
+                         <c:if test="${i.count%3==0}">
+                          </div>
+                         </c:if>                 
+                        </c:forEach>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>재료</h4>
+                        <div class="latest-product__slider owl-carousel">
+                        <c:forEach  var="vo" items="${inglist }" varStatus="i">
+                        <c:if test="${i.count == 1 or i.count == 4 or i.count == 7 or i.count == 10}">
+                            <div class="latest-prdouct__slider__item">
+                            </c:if>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="${vo.civo.ciimage }" alt="" style="width:110px; height:110px">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>${vo.civo.ename }</h6>
+                                        <span>${vo.civo.ingname }</span>
+                                    </div>
+                                </a>
+                         <c:if test="${i.count%3==0}">
+                          </div>
+                         </c:if>                 
+                        </c:forEach>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="latest-product__text">
+                        <h4>나만의 칵테일</h4>
+                        <div class="latest-product__slider owl-carousel">
+                        <c:forEach  var="vo" items="${clist }" varStatus="i">
+                        <c:if test="${i.count == 1 or i.count == 4 or i.count == 7 or i.count == 10}">
+                            <div class="latest-prdouct__slider__item">
+                            </c:if>
+                                <a href="#" class="latest-product__item">
+                                    <div class="latest-product__item__pic">
+                                        <img src="${vo.image }" alt="" style="width:110px; height:110px">
+                                    </div>
+                                    <div class="latest-product__item__text">
+                                        <h6>${vo.ename }</h6>
+                                        <span>${vo.name }</span>
+                                    </div>
+                                </a>
+                         <c:if test="${i.count%3==0}">
+                          </div>
+                         </c:if>                 
+                        </c:forEach>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Latest Product Section End -->
+
+    <!-- Blog Section Begin -->
+    <section class="from-blog spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title from-blog__title">
+                        <h2>From The magazine</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <c:forEach var="vo" items="${newslist }" >
+                <div class="col-lg-4 col-md-4 col-sm-6">
+                    <div class="blog__item">
+                        <div class="blog__item__pic">
+                            <img src="${vo.image }" alt="" style="width:100%;height:240px">
+                        </div>
+                        <div class="blog__item__text">
+                            <ul>
+                                <li><i class="fa fa-calendar-o"></i> ${vo.dbday }</li>
+                                <li><i class="fa fa-eye"></i> ${vo.hit }</li>
+                            </ul>
+                            <h5><a href="#">${vo.title }</a></h5>
+                            <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">${vo.content } </p>
+                        </div>
+                    </div>
+                </div>
+            </c:forEach>
+                
+            </div>
+        </div>
+    </section>
 </body>
 </html>
